@@ -1,0 +1,439 @@
+.welcome-popup {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(../img/header.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 2;
+	transition: 0.5s ease-in-out;
+	pointer-events: visible;
+}
+.welcome-popup h1 {
+	position: absolute;
+	top: 30%;
+	color: #fff;
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	z-index: 1;
+}
+.welcome-popup .choose-account {
+	z-index: 1;
+	cursor: pointer;
+}
+.welcome-popup .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+	background-color: rgba(2, 1, 10, 0.7);
+}
+.welcome-popup .choose-account .account-conteiner {
+	width: 400px;
+	padding: 5px 20px;
+	margin: 10px auto;
+	background-color: #10121498;
+	border: 2px solid #303030;
+	border-radius: 10px;
+}
+.welcome-popup .choose-account .avatar {
+	height: 80px;
+	width: 80px;
+	margin-top: 10px;
+}
+.welcome-popup .choose-account .account-info-conteiner .lvl-info-conteiner {
+	margin-top: 16px;
+}
+.welcome-popup .choose-account .account-info-conteiner .account-name {
+	margin-top: 8px;
+}
+
+.popup-conteiner {
+	display: flex;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	pointer-events: visible;
+	z-index: 1;
+}
+
+.popup-conteiner .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: radial-gradient(
+		circle,
+		rgba(0, 0, 0, 0.897) 42%,
+		rgba(0, 0, 0, 0.548) 100%
+	);
+	opacity: 1;
+	transition: opacity 0.3s ease-in;
+}
+
+.add-popup {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 450px;
+	height: 600px;
+	background: #03010f46;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0.1px 0.1px 300px #bc6df00a;
+	color: #fff;
+	opacity: 1;
+	transform: translateY(0px);
+	transition: transform 0.8s ease-out, opacity 0.3s ease-in;
+}
+.add-popup::before {
+	content: "";
+	position: absolute;
+	width: 225px;
+	height: 130%;
+	background: linear-gradient(#f72585, #4cc9f0);
+	animation: popup-border-spin 6s linear infinite;
+}
+.add-popup::after {
+	content: "";
+	position: absolute;
+	inset: 4px;
+	border-radius: 10px;
+	background: #101214;
+}
+
+.add-popup .fa-xmark {
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	cursor: pointer;
+	font-size: 1.8rem;
+	z-index: 1;
+
+	transform: rotate(0deg);
+	transition: 0.2s;
+}
+
+.add-popup h1 {
+	position: absolute;
+	top: 90px;
+	font-size: 2rem;
+	z-index: 1;
+}
+
+.add-popup .input-conteiner {
+	display: flex;
+	position: relative;
+	top: -20%;
+	width: 100%;
+	justify-content: center;
+}
+
+.add-popup input {
+	position: relative;
+	width: 80%;
+	padding: 12px;
+	background: none;
+	border: 2px solid rgba(255, 255, 255, 0.25);
+	border-radius: 5px;
+	outline: none;
+	color: #fff;
+	font-size: 1rem;
+	z-index: 1;
+	transition: 0.4s;
+}
+
+.add-popup .input-conteiner span {
+	padding: 0 3px;
+	position: absolute;
+	top: 15px;
+	left: 64px;
+	font-size: 1rem;
+	font-family: "Raleway", sans-serif;
+	color: rgba(255, 255, 255, 0.25);
+	text-transform: uppercase;
+	pointer-events: none;
+	z-index: 1;
+	transition: 0.4s;
+}
+
+.add-popup .input-conteiner input:valid ~ span,
+.add-popup .input-conteiner input:focus ~ span {
+	background: #101214;
+	transform: translate(6px, -22px);
+	font-size: 0.7rem;
+	color: #4cc9f0;
+	border-left: 1px solid #4cc9f0;
+	border-right: 1px solid #4cc9f0;
+	letter-spacing: 0.05rem;
+	transition: 0.4s;
+}
+
+.add-popup .input-conteiner input:valid,
+.add-popup .input-conteiner input:focus {
+	border: 2px solid #4cc9f0;
+	transition: 0.4s;
+}
+
+.add-popup .tier-select {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 250px;
+	width: 200px;
+	height: 50px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.tier-select ul {
+	display: flex;
+	justify-content: center;
+	width: 200px;
+	padding: 0 10px;
+}
+
+.tier-select li {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 50px;
+	height: 50px;
+	list-style: none;
+	cursor: pointer;
+	color: #101214;
+}
+
+li .tier-ico-conteiner {
+	position: relative;
+	text-align: center;
+	transition: 0.4s;
+}
+
+.tier-ico-conteiner i {
+	position: relative;
+	display: block;
+	font-size: 1.5rem;
+	line-height: 50px;
+	text-align: center;
+}
+
+li .tier-text-conteiner {
+	position: absolute;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
+	opacity: 0;
+	transform: translateY(18px);
+	transition: 0.4s;
+}
+ul .indicator {
+	z-index: -1;
+	position: absolute;
+	left: 25px;
+	top: -26px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 5px solid #101214;
+	transition: 0.4s;
+}
+
+ul .indicator::before {
+	content: "";
+	position: absolute;
+	top: 53%;
+	left: -18px;
+	width: 18px;
+	height: 23px;
+	border-top-right-radius: 18px;
+	box-shadow: 1px -10px 0 0 #101214;
+}
+ul .indicator::after {
+	content: "";
+	position: absolute;
+	top: 53%;
+	right: -18px;
+	width: 18px;
+	height: 23px;
+	border-top-left-radius: 18px;
+	box-shadow: -1px -10px 0 0 #101214;
+}
+
+.tier-select li:nth-child(1).active ~ .indicator {
+	transform: translateX(calc(50px * 0));
+	background-color: #4cc9f0;
+}
+.tier-select li:nth-child(2).active ~ .indicator {
+	transform: translateX(calc(50px * 1));
+	background-color: #991cec;
+}
+.tier-select li:nth-child(3).active ~ .indicator {
+	transform: translateX(calc(50px * 2));
+	background-color: #f72585;
+}
+
+.tier-select .exp-info {
+	position: absolute;
+	top: 62px;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	transition: 0.4s;
+}
+
+.exp-info.tier1 {
+	color: #4cc9f0;
+	border-color: #4cc9f0;
+	text-shadow: 0.1px 0.1px 3px #4ccaf0c0;
+}
+.exp-info.tier2 {
+	color: #991cec;
+	border-color: #991cec;
+	text-shadow: 0.1px 0.1px 3px #991ceccc;
+}
+.exp-info.tier3 {
+	color: #f72585;
+	border-color: #f72585;
+	text-shadow: 0.1px 0.1px 3px #f72584c9;
+}
+
+.add-popup .exp-limit-conteiner {
+	position: absolute;
+	bottom: 37%;
+	width: 65%;
+	display: flex;
+	justify-content: space-between;
+	z-index: 1;
+}
+
+.exp-limit-conteiner .exp-limit-info {
+	display: inline-block;
+	margin-left: 16px;
+	font-size: 0.8rem;
+	letter-spacing: 0.5px;
+}
+
+.exp-limit-conteiner .limit {
+	display: inline-block;
+	margin-right: 16px;
+	font-size: 0.8rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	transition: 0.3s ease-in-out;
+}
+
+p.limit span {
+	font-weight: normal;
+	color: rgb(247, 247, 247);
+}
+
+.exp-limit-conteiner .exp-bar-limit-border {
+	position: absolute;
+	top: 20px;
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.699);
+	border-radius: 5px;
+	background-color: rgba(82, 82, 82, 0.4);
+	transition: width 1s ease-in-out;
+	z-index: 1;
+}
+
+.exp-bar-limit-border .exp-bar-limit-ammount {
+	position: relative;
+	width: 70%;
+	height: 15px;
+	border-radius: 5px;
+	transition: 0.3s ease-in-out;
+}
+
+.exp-bar-limit-border .dashes {
+	position: absolute;
+	top: 0;
+	height: 15px;
+	width: 100%;
+}
+.dashes ul {
+	list-style: none;
+	font-size: 0;
+}
+.dashes li {
+	display: inline-block;
+	width: 10%;
+	height: 11px;
+	margin-top: 2px;
+	border-right: 1px solid #0000006e;
+}
+.dashes li:last-child {
+	border-right: none;
+}
+
+.exp-bar-limit-ammount.tier1 {
+	background-color: #4cc9f0;
+}
+.exp-bar-limit-ammount.tier2 {
+	background-color: #991cec;
+}
+.exp-bar-limit-ammount.tier3 {
+	background-color: #f72585;
+}
+.limit.tier1 {
+	color: #4cc9f0;
+}
+.limit.tier2 {
+	color: #991cec;
+}
+.limit.tier3 {
+	color: #f72585;
+}
+
+.add-popup .error-info {
+	position: absolute;
+	bottom: 120px;
+	letter-spacing: 1px;
+	font-size: 0.8rem;
+	color: #f72548;
+	font-family: "Raleway", sans-serif;
+	z-index: 1;
+	transition: 0.2s;
+}
+
+.add-popup #confirm {
+	position: absolute;
+	bottom: 50px;
+	padding: 10px 22px;
+	background: none;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	letter-spacing: 1.5px;
+	z-index: 1;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.add-popup #confirm:hover {
+	box-shadow: 0.1px 0.1px 20px #f7258444;
+	border-color: #f72584c9;
+	color: #f72584c9;
+	padding: 10px 26px;
+}

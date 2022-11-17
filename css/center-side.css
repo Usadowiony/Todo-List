@@ -1,0 +1,198 @@
+.center-side {
+	position: relative;
+	width: 50%;
+	background: linear-gradient(
+		90deg,
+		rgba(11, 11, 14, 0) 0%,
+		rgba(11, 11, 14, 0.473) 50%,
+		rgba(11, 11, 14, 0) 100%
+	);
+}
+
+.center-side header {
+	color: white;
+}
+
+.center-side header h1 {
+	margin: 30px 0 5px;
+	font-size: 3rem;
+	word-spacing: 9px;
+	letter-spacing: 3px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.center-side header h2 {
+	font-size: 1.8rem;
+	word-spacing: 2px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 10px;
+	margin: 15px auto 0;
+	font-size: 1.6rem;
+	text-align: center;
+}
+nav ul {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	list-style: none;
+	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.178);
+}
+nav ul li {
+	width: 70px;
+	height: 70px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: linear-gradient(340deg, #4362ee11 0%, #4ccaf010 100%);
+	border-bottom: 2px solid #fff;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+nav ul li:first-child{
+	border-top-left-radius: 12px;
+}
+nav ul li:last-child{
+	border-top-right-radius: 12px;
+}
+nav ul li i{
+	padding-bottom: 5px;
+}
+nav ul p {
+	width: 80px;
+	font-size: 0.75rem;
+}
+
+.center-side main {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.center-side .list {
+	position: relative;
+	top: 30px;
+	max-height: 570px;
+	overflow-y: scroll;
+}
+.no-task {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 1.4rem;
+	color: #fff;
+	opacity: 1;
+	transform: scaleX(100%);
+	transition: 0.3s;
+}
+
+.center-side .list ul {
+	list-style: none;
+	display: none;
+}
+.center-side .list ul.show {
+	display: block;
+}
+
+.center-side .list li {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 4px;
+	padding: 0 10px 0 10px;
+	font-size: 1.3rem;
+	color: #fff;
+	background-image: linear-gradient(340deg, #c51e692a 0%, #3ca1c02c 100%);
+	border: 3px solid #f3f3f328;
+	border-radius: 10px;
+}
+
+.center-side .list li:last-child {
+	margin: 0;
+}
+
+.list li .checkbox {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 23px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.list .checkbox i {
+	font-size: 1rem;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+.center-side .list p {
+	padding: 10px;
+	line-height: 30px;
+	display: inline-block;
+}
+
+.center-side .list p.task-name {
+	margin-right: auto;
+	word-spacing: 0.5px;
+	letter-spacing: 1px;
+	max-width: 650px;
+	overflow: hidden;
+	transition: 0.2s;
+}
+
+.center-side .list p.exp {
+	text-transform: uppercase;
+	transition: 0.2s;
+}
+
+li.tier1 p.exp {
+	color: #4361ee;
+	border-color: #4361ee;
+	text-shadow: 0.1px 0.1px 7px #4361ee;
+}
+li.tier2 p.exp {
+	color: #a430f1;
+	border-color: #a430f1;
+	text-shadow: 0.1px 0.1px 7px #a430f1;
+}
+li.tier3 p.exp {
+	color: #f72585;
+	border-color: #f72585;
+	text-shadow: 0.1px 0.1px 7px #f72585;
+}
+
+.center-side .list .edit {
+	padding: 10px;
+	line-height: 30px;
+	display: inline-block;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.center-side .list-tools {
+	position: absolute;
+	bottom: 7px;
+	height: 40px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: black;
+}
+.list-tools p {
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	background-color: rgb(136, 86, 86);
+	font-size: 1.2rem;
+}

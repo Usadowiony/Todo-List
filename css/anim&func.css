@@ -1,0 +1,212 @@
+.welcome-popup.hide {
+	opacity: 0;
+	pointer-events: none;
+}
+/* ================= */
+/* NAV HOVER*/
+/* ================= */
+nav ul li:hover {
+	background-color: #4e6bee1e;
+	border-bottom: 2px solid #4cc9f0;
+	color: #4cc9f0;
+}
+/* ================= */
+/* NO TASK INFO SHOW/HIDE */
+/* ================= */
+.no-task.hide {
+	opacity: 0;
+	transform: scaleX(90%);
+	transition: 0.3s;
+}
+/* ================= */
+/* TASK COMPLETED LI STYLES */
+/* ================= */
+.center-side .list li.completed p.task-name,
+.center-side .list li.completed p.exp {
+	word-spacing: 1px;
+	text-decoration: line-through;
+	color: rgba(255, 255, 255, 0.342);
+	text-shadow: none;
+}
+.center-side .list li.completed {
+	background-image: linear-gradient(340deg, #4411282a 0%, #142c332c 100%);
+	border: 3px solid #f3f3f328;
+}
+.center-side .list li.completed .edit i {
+	color: rgba(255, 255, 255, 0.342);
+}
+.list li.completed .checkbox {
+	border: 2px solid #fff;
+	background-color: #fff;
+}
+.list li.completed .checkbox i {
+	color: black;
+	opacity: 1;
+}
+/* ================= */
+/* CHECKBOX HOVER */
+/* ================= */
+.list li .checkbox:hover {
+	border-radius: 35%;
+}
+/* ================= */
+/* POPUP ADD SHOW/HIDE */
+/* ================= */
+.popup-conteiner.hide {
+	pointer-events: none;
+}
+.popup-conteiner.hide .overlay {
+	opacity: 0;
+	transition: opacity 0.4s ease-in;
+}
+.popup-conteiner.hide .add-popup {
+	transform: translateY(120px);
+	opacity: 0;
+	transition: transform 0.4s ease-out, opacity 0.3s ease-in;
+}
+/* POPUP X HOVER */
+.add-popup .fa-xmark:hover {
+	transform: scale(0.8);
+	color: #f72585;
+	text-shadow: 0.1px 0.1px 20px #f7258452;
+}
+/* ================= */
+/* POPUP ADD, TIER SELECT */
+/* ================= */
+.tier-select li.active .tier-ico-conteiner {
+	transform: translateY(-26px);
+}
+.tier-select li.active .tier-text-conteiner {
+	opacity: 1;
+	transform: translateY(10px);
+}
+/* ================= */
+/* GLOW ANIMATION UNDER CONTEINER */
+/* ================= */
+.glow::before,
+.glow::after {
+	content: "";
+	position: absolute;
+	left: -3px;
+	top: -3px;
+	background: linear-gradient(
+		45deg,
+		#f72585,
+		#b5179e,
+		#7209b7,
+		#560bad,
+		#480ca8,
+		#3a0ca3,
+		#3f37c9,
+		#4361ee,
+		#4895ef,
+		#4cc9f0
+	);
+	background-size: 200%;
+	width: calc(100% + 6px);
+	height: calc(100% + 6px);
+	border-radius: 10px;
+	z-index: -1;
+	animation: spin 4s linear infinite;
+}
+@keyframes spin {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+.glow::after {
+	filter: blur(40px);
+	opacity: 0.3;
+}
+/* ================= */
+/* EXP BAR GRADIENT COLOUR ANIMATION */
+/* ================= */
+.exp-bar-border .exp-bar-ammount::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		90deg,
+		#560bad,
+		#3f37c9,
+		#4cc9f0,
+		#f72585,
+		#560bad,
+		#3f37c9,
+		#4cc9f0,
+		#f72585,
+		#560bad
+	);
+	animation: animate 30s linear infinite;
+	background-size: 500%;
+	border-radius: 10px;
+}
+.exp-bar-border .exp-bar-ammount::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		90deg,
+		#560bad,
+		#3f37c9,
+		#4cc9f0,
+		#f72585,
+		#560bad,
+		#3f37c9,
+		#4cc9f0,
+		#f72585,
+		#560bad
+	);
+	animation: expbar 30s linear infinite;
+	background-size: 500%;
+	border-radius: 10px;
+	filter: blur(1px);
+}
+@keyframes expbar {
+	0% {
+		background-position: 0 0;
+	}
+	0% {
+		background-position: 500% 0;
+	}
+}
+/* ================= */
+/* POPUP BORDER GLOW ANIMATION */
+/* ================= */
+@keyframes popup-border-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* ================= */
+/* NEW TASK ADDED ANIMATION */
+/* ================= */
+.new-li {
+	animation: append-li 0.9s ease-in-out;
+}
+@keyframes append-li {
+	0% {
+		transform: scaleY(0);
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	50% {
+		transform: scaleY(0);
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	100% {
+		transform: scaleY(1);
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}

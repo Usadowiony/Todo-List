@@ -1,0 +1,8 @@
+.right-side {
+	width: 25%;
+    margin-right: -10px;
+	padding: 0 20px;
+	background-color: rgba(10, 10, 10, 0.377);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

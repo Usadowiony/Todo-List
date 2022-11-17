@@ -1,0 +1,94 @@
+.left-side {
+	width: 25%;
+    margin-left: -10px;
+    border-radius: 10px;
+	overflow-y: scroll;
+	padding: 20px 0;
+}
+
+.left-side div.account-conteiner {
+	position: relative;
+	width: 85%;
+	max-width: 280px;
+	margin-top: 20px;
+	margin-left: 15%;
+	margin-bottom: 20px;
+	height: 100px;
+	padding-left: 5px;
+	padding: 5px 10px;
+	background-image: linear-gradient(340deg, #c51e692a 0%, #3ca1c02c 100%);
+	border: 3px solid #f3f3f328;
+	border-radius: 10px;
+	box-shadow: 0.5px 2px 20px black;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.account-conteiner .avatar {
+	float: left;
+	height: 100%;
+	width: 84px;
+	background-image: url(../img/avatar.woj.jpg);
+	background-size: cover;
+	background-position: center;
+	border-radius: 50%;
+	box-shadow: inset 0 0 20px #000000c2;
+}
+
+.account-conteiner .account-info-conteiner {
+	color: rgb(247, 247, 247);
+	height: 100px;
+	margin-left: 100px;
+	padding: 5px;
+}
+
+.account-info-conteiner .account-name {
+	letter-spacing: 0.05rem;
+	font-size: 1.4rem;
+}
+
+.account-info-conteiner .account-name i {
+	color: #f72585;
+	font-size: 1rem;
+	margin-left: 7px;
+}
+
+.account-info-conteiner .lvl-info-conteiner {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 6px;
+}
+
+.account-info-conteiner .lvl-info {
+	display: inline-block;
+	font-size: 0.8rem;
+	color: #4cc9f0;
+}
+
+.account-info-conteiner .lvl-percent {
+	display: inline-block;
+	font-size: 0.8rem;
+	color: #f72585;
+}
+
+span.lvl-percent-value {
+	color: rgb(247, 247, 247);
+}
+span.lvl-percent-value {
+	color: rgb(247, 247, 247);
+}
+
+.account-info-conteiner .exp-bar-border {
+	width: 100%;
+	border: 1px solid rgb(19, 19, 19);
+	border-radius: 10px;
+	background-color: rgba(82, 82, 82, 0.4);
+	transition: width 1s ease-in-out;
+}
+
+.exp-bar-border .exp-bar-ammount {
+	position: relative;
+	width: 70%;
+	height: 10px;
+}

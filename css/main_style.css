@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu+Condensed&display=swap');
+@import "left-side.css";
+@import "center-side.css";
+@import "right-side.css";
+@import "popups.css";
+@import "anim&func.css";
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Ubuntu Condensed', sans-serif; */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 10px;
+	font-family: "Ubuntu Condensed", sans-serif;
+	background-color: #02010a;
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 90vh;
+	max-width: 80%;
+	margin: 5vh auto;
+	padding: 0 10px;
+	border-radius: 10px;
+	background-image: url(../img/header.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background-color: rgba(2, 1, 10, 0.6);
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: red;
+	border-radius: 10px;
+}
+
+.account-conteiner:nth-child(2) .avatar {
+	background-image: url(../img/avatar-tuptup.jpg);
+}
+
+.account-conteiner:nth-child(2) .exp-bar-border .exp-bar-ammount {
+	width: 30%;
+}

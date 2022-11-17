@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.png">
+    <script src="https://kit.fontawesome.com/feb3850c3c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main_style.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="welcome-popup">
+        <div class="overlay"></div>
+        <h1>choose your account</h1>
+        <div class="choose-account">
+            <div class="account-conteiner wojciu">
+                <div class="avatar"></div>
+                <div class="account-info-conteiner">
+                    <h2 class="account-name">Wojciu<i class="fa-solid fa-fire"></i></h2>
+                    <div class="lvl-info-conteiner">
+                        <p class="lvl-info">Level: <span class="lvl-percent-value">16</span></p>
+                        <p class="lvl-percent"><span class="lvl-percent-value">70</span>%</p>
+                    </div>
+                    <div class="exp-bar-border">
+                        <div class="exp-bar-ammount"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="account-conteiner tomi">
+                <div class="avatar"></div>
+                <div class="account-info-conteiner">
+                    <h2 class="account-name">Tommy<i class="fa-solid fa-fire"></i></h2>
+                    <div class="lvl-info-conteiner">
+                        <p class="lvl-info">Level: <span class="lvl-percent-value">1</span></p>
+                        <p class="lvl-percent"><span class="lvl-percent-value">30</span>%</p>
+                    </div>
+                    <div class="exp-bar-border">
+                        <div class="exp-bar-ammount"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container glow">
+        <div class="overlay"></div>
+        <div class="left-side clearfix">
+            <div class="account-conteiner wojciu">
+                <div class="avatar"></div>
+                <div class="account-info-conteiner">
+                    <h2 class="account-name">Wojciu<i class="fa-solid fa-fire"></i></h2>
+                    <div class="lvl-info-conteiner">
+                        <p class="lvl-info">Level: <span class="lvl-percent-value">16</span></p>
+                        <p class="lvl-percent"><span class="lvl-percent-value">70</span>%</p>
+                    </div>
+                    <div class="exp-bar-border">
+                        <div class="exp-bar-ammount"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="account-conteiner tomi">
+                <div class="avatar"></div>
+                <div class="account-info-conteiner">
+                    <h2 class="account-name">Tommy<i class="fa-solid fa-fire"></i></h2>
+                    <div class="lvl-info-conteiner">
+                        <p class="lvl-info">Level: <span class="lvl-percent-value">1</span></p>
+                        <p class="lvl-percent"><span class="lvl-percent-value">30</span>%</p>
+                    </div>
+                    <div class="exp-bar-border">
+                        <div class="exp-bar-ammount"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center-side">
+            <header>
+                <h1>welcome back <span class="header-name">wojciu</span></h1>
+                <h2 class="date"></h2>
+                <nav>
+                    <ul>
+                        <li class="plusBtn">
+                            <i class="fa-solid fa-plus"></i>
+                            <p>new task</p>
+                        </li>
+                        <li class="calendarBtn">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p>calendary</p>
+                        </li>
+                        <li class="doorBtn">
+                            <i class="fa-solid fa-door-open"></i>
+                            <p>vacation</p>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <p class="no-task">You currently have no task</p>
+            <main class="list">
+                <ul id="wojciu" class="show">
+                    <!-- <li class="tier3">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="task-name">Umyć zęby</p>
+                        <p class="exp">+300 exp</p>
+                        <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+                    </li>
+                    <li class="tier1">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="task-name">Zjeść sałatke</p>
+                        <p class="exp">+100 exp</p>
+                        <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+                    </li> -->
+                </ul>
+                <ul id="tomi">
+                    <!-- <li class="tier3">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="task-name">Programowanie</p>
+                        <p class="exp">+300 exp</p>
+                        <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+                    </li>
+                    <li class="tier2">
+                        <div class="checkbox">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <p class="task-name">Matematyka 1H</p>
+                        <p class="exp">+100 exp</p>
+                        <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+                    </li> -->
+                </ul>
+            </main>
+            <!-- <div class="list-tools">
+                <p class="items-left">5 items left</p>
+                <p class="streak">streak: 5</p>
+            </div> -->
+        </div>
+        <div class="right-side"></div>
+    </div>
+    <div class="popup-conteiner hide">
+        <div class="overlay"></div>
+        <div class="add-popup">
+            <i class="fa-solid fa-xmark"></i>
+            <h1>Add new task to the list</h1>
+            <div class="input-conteiner"><input type="text" required="required"><span>Task name</span></div>
+            <div class="tier-select">
+                <ul>
+                    <li class="tier-list tier-one active">
+                        <div class="tier-ico-conteiner"><i class="fa-solid fa-poo"></i></div>
+                        <div class="tier-text-conteiner">Easy</div>
+                    </li>
+                    <li class="tier-list tier-two">
+                        <div class="tier-ico-conteiner"><i class="fa-solid fa-face-smile-beam"></i></div>
+                        <div class="tier-text-conteiner">Normal</div>
+                    </li>
+                    <li class="tier-list tier-three">
+                        <div class="tier-ico-conteiner"><i class="fa-sharp fa-solid fa-crown"></i></div>
+                        <div class="tier-text-conteiner">Hard</div>
+                    </li>
+                    <div class="indicator"></div>
+                </ul>
+                <p class="exp-info tier1">+100 exp</p>
+            </div>
+            <div class="exp-limit-conteiner">
+                <p class="exp-limit-info">Current exp per day:</p>
+                <p class="limit tier1"><span>700</span> / 1000</p>
+                <div class="exp-bar-limit-border">
+                    <div class="exp-bar-limit-ammount tier1"></div>
+                    <div class="dashes">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="error-info"></p>
+            <button id="confirm">Done</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
